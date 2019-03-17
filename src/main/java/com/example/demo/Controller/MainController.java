@@ -30,12 +30,14 @@ public class MainController {
                            @RequestParam String lname,
                            @RequestParam String company,
                            @RequestParam String city,
+                           @RequestParam String type,
                            Model model){
 
         model.addAttribute("email",email);
         model.addAttribute("lname",lname);
         model.addAttribute("company",company);
         model.addAttribute("city",city);
+        model.addAttribute("type",type);
 
         return "zoho";
     }
