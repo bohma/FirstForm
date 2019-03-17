@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body onload="funk()">
 
 
 <form action='https://crm.zoho.eu/crm/WebToLeadForm' name=WebToLeads175018000000142273 method='POST'
-      onSubmit='javascript:document.charset="UTF-8"; return checkMandatory175018000000142273()' accept-charset='UTF-8'>
+      onSubmit='javascript:document.charset="UTF-8"; return checkMandatory175018000000142273()' accept-charset='UTF-8' id="zohoForm">
 
     <input type='text' style='display:none;' name='xnQsjsdp'
            value='6a0445a9ff00e12d39b7c1ecac528f6b7dcbb51c61562ed7addcbc5262610201'/>
@@ -27,13 +27,6 @@
 
     <input type="text" id="idType" th:value="${type}">
 
-
-    <tr>
-        <td colspan='2' style='text-align:center; padding-top:15px;font-size:12px;'>
-            <input style='font-size:12px;color:black' type='submit' value='Submit' onclick="funk()"/>
-            <input type='reset' style='font-size:12px;color:black' value='Reset'/>
-        </td>
-    </tr>
 
     <script>
         var mndFileds = new Array('Company', 'Last Name');
@@ -91,6 +84,7 @@
                 document.getElementById("idURL").setAttribute("value", "https://firstforma.herokuapp.com/second");
                 break;
         }
+        document.getElementById("zohoForm").submit();
     }
 </script>
 
